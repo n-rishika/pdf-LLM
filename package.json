@@ -1,22 +1,41 @@
 {
-  "name": "web-app",
+  "name": "pdf-llm",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "PDF Rule Checker - Upload a PDF and check it against custom rules using AI",
+  "main": "api/check-pdf.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "start": "serve -s build -l 3000",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["pdf", "ai", "rule-checker", "openai"],
+  "author": "n-rishika",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
     "express": "^5.1.0",
     "formidable": "^3.5.4",
-    "multer": "^2.0.2",
     "openai": "^6.9.1",
-    "pdf-parse": "^2.4.5"
+    "pdf-parse": "^2.4.5",
+    "serve": "^14.1.2"
+  },
+  "devDependencies": {
+    "web-vitals": "^2.1.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
